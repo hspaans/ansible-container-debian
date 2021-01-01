@@ -30,4 +30,21 @@ updates:
     schedule:
       interval: weekly
       day: friday
+    target-branch: master
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: friday
+    target-branch: v9
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: friday
+    target-branch: v10
     open-pull-requests-limit: 10
