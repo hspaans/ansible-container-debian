@@ -1,4 +1,4 @@
-FROM debian:10.6-slim
+FROM debian:9.12-slim
 
 LABEL org.opencontainers.image.description="Debian container for Molecule"
 LABEL org.opencontainers.image.source=https://github.com/hspaans/molecule-container-debian
