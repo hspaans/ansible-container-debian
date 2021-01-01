@@ -1,7 +1,7 @@
 FROM debian:10.6-slim
 
-LABEL org.opencontainers.image.description="Debian container for Ansible"
-LABEL org.opencontainers.image.source=https://github.com/hspaans/ansible-container-debian
+LABEL org.opencontainers.image.description="Debian container for Molecule"
+LABEL org.opencontainers.image.source=https://github.com/hspaans/molecule-container-debian
 
 # Avoid warnings by switching to noninteractive
 ENV DEBIAN_FRONTEND=noninteractive
