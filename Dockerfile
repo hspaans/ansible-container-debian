@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
 #     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
 #     && apt-get -y install --no-install-recommends systemd systemd-sysv python3-pip \
-    && apt-get -y install --no-install-recommends systemd systemd-sysv \
+    && apt-get -y install --no-install-recommends systemd systemd-sysv python3 \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
