@@ -1,9 +1,9 @@
 #!/bin/sh
-ALIAS_CMD="$(echo ""$0"" | sed -e 's?/sbin/??')"
+ALIAS_CMD=$(echo "$0" | sed -e 's?/sbin/??')
 
 case "$ALIAS_CMD" in
     start|stop|restart|reload|status)
-        exec service $1 $ALIAS_CMD
+        exec service "$1" "$ALIAS_CMD"
         ;;
 esac
 
@@ -12,10 +12,10 @@ case "$1" in
         exec service --status-all
         ;;
     reload-configuration )
-        exec service $2 restart
+        exec service "$2" restart
         ;;
     start|stop|restart|reload|status)
-        exec service $2 $1
+        exec service "$2" "$1"
         ;;
     \?)
         exit 0
