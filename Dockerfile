@@ -1,4 +1,4 @@
-FROM debian:bullseye-20210208-slim
+FROM debian:bullseye-20210311-slim
 
 LABEL org.opencontainers.image.description="Debian container for Molecule"
 LABEL org.opencontainers.image.source=https://github.com/hspaans/molecule-container-debian
