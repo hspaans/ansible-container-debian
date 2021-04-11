@@ -22,6 +22,13 @@ updates:
     target-branch: v10
     open-pull-requests-limit: 10
 
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
+    target-branch: v11
+    open-pull-requests-limit: 10
+
   - package-ecosystem: github-actions
     directory: /
     schedule:
@@ -41,4 +48,11 @@ updates:
     schedule:
       interval: monthly
     target-branch: v10
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    target-branch: v11
     open-pull-requests-limit: 10
