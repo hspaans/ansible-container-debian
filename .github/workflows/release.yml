@@ -1,5 +1,5 @@
 ---
-name: CI
+name: Release
 
 on:
   push:
@@ -38,18 +38,18 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Container Reference Name
-        id: ref
+        id: container_ref
         run: |
           # Strip git ref prefix from version
           NAME=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,; s/^v//')
           # Use Docker `latest` tag convention
           [ "$NAME" == "master" ] && NAME=latest
           # Expose variables
-          echo "::set-env name=name::$NAME"
+          echo "ref_name=$NAME" >> GITHUB_ENV
 
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ github.repository }}:${{ steps.ref.name }}
+          tags: ${{ github.repository }}:${{ env.ref_name }}
