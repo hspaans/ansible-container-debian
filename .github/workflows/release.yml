@@ -11,6 +11,8 @@ on:
     # Publish `v1.2.3` tags as releases.
     tags:
       - v*
+env:
+  REGISTRY: ghcr.io
 
 jobs:
   # Push image to GitHub Packages.
@@ -33,7 +35,7 @@ jobs:
       - name: Login to Packages Container registry
         uses: docker/login-action@v1 
         with:
-          registry: ghcr.io
+          registry: $REGISTRY
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
@@ -52,4 +54,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ github.repository }}:${{ env.ref_name }}
+          tags: $REGISTRY/${{ github.repository }}:${{ env.ref_name }}
