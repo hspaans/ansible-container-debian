@@ -45,7 +45,7 @@ jobs:
           # Use Docker `latest` tag convention
           [ "$NAME" == "master" ] && NAME=latest
           # Expose variables
-          echo "ref_name=$NAME" >> GITHUB_ENV
+          echo "ref_name=$NAME" >> $GITHUB_ENV
 
       - name: Build and push
         id: docker_build
