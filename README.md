@@ -35,11 +35,11 @@ verifier:
 
 The container is based on [LTS](https://en.wikipedia.org/wiki/Long-term_support) distribution versions with official support and fall within N and N-1. The *latest*-tag is an experimental tag to test future releases.
 
-| Platform | Version        | Image                                                                        |
-|:--------:|:--------------:|:----------------------------------------------------------------------------:|
-| Debian   | 9 (Stretch)    | [hspaans/molecule-container-debian:9][molecule-container-debian:9]           |
-| Debian   | 10 (Buster)    | [hspaans/molecule-container-debian:10][molecule-container-debian:10]         |
-| Debian   | 11 (Bullseye)  | [hspaans/molecule-container-debian:latest][molecule-container-debian:latest] |
+| Platform |    Version    |                                    Image                                     |
+| :------: | :-----------: | :--------------------------------------------------------------------------: |
+|  Debian  |  9 (Stretch)  |      [hspaans/molecule-container-debian:9][molecule-container-debian:9]      |
+|  Debian  |  10 (Buster)  |     [hspaans/molecule-container-debian:10][molecule-container-debian:10]     |
+|  Debian  | 11 (Bullseye) | [hspaans/molecule-container-debian:latest][molecule-container-debian:latest] |
 
 [ansible]: https://github.com/ansible/ansible
 [debian]: https://debian.org
